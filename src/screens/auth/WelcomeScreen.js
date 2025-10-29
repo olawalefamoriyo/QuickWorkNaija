@@ -85,7 +85,7 @@ const styles = StyleSheet.create({
     marginBottom: 40,
   },
   loginText: {
-    color: "#FF6D00", // orange color like the screenshot
+    color: "#FF6D00",
     fontSize: 16,
     fontWeight: "bold",
   },

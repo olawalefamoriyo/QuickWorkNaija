@@ -3,6 +3,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { View, Image, StyleSheet } from "react-native";
 import { useFonts } from "expo-font";
+import * as SplashScreen from "expo-splash-screen";
 
 import Onboarding from "./src/screens/auth/Onboarding";
 import WelcomeScreen from "./src/screens/auth/WelcomeScreen";
@@ -33,8 +34,36 @@ export default function App() {
   });
 
   useEffect(() => {
+    let mounted = true;
+    (async () => {
+      try {
+        await SplashScreen.preventAutoHideAsync();
+      } catch (e) {
+      }
+    })();
+
+    const fallback = setTimeout(async () => {
+      try {
+        await SplashScreen.hideAsync();
+      } catch (e) {}
+      if (mounted) setShowSplashScreen(false);
+    }, 10000);
+
+    return () => {
+      mounted = false;
+      clearTimeout(fallback);
+    };
+  }, []);
+
+  useEffect(() => {
     if (fontsLoaded) {
-      const timer = setTimeout(() => setShowSplashScreen(false), 1000);
+      const timer = setTimeout(async () => {
+        setShowSplashScreen(false);
+        try {
+          await SplashScreen.hideAsync();
+        } catch (e) {
+        }
+      }, 1000);
       return () => clearTimeout(timer);
     }
   }, [fontsLoaded]);
