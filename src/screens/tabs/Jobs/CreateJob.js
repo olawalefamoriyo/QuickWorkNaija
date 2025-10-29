@@ -44,7 +44,7 @@ export default function CreateJob() {
           </Text>
           <TextInput
             placeholder="e.g. Social Media Manager"
-            placeholderTextColor="#999"
+            placeholderTextColor="#000"
             style={styles.input}
           />
         </View>
@@ -55,7 +55,7 @@ export default function CreateJob() {
           </Text>
           <TextInput
             placeholder="Describe the job details..."
-            placeholderTextColor="#999"
+            placeholderTextColor="#000"
             multiline
             numberOfLines={5}
             style={[styles.input, { height: 120, textAlignVertical: "top" }]}
@@ -69,6 +69,7 @@ export default function CreateJob() {
             </Text>
             <TextInput
               placeholder="e.g. 10,000"
+              placeholderTextColor="#000"
               keyboardType="numeric"
               style={styles.input}
             />
@@ -78,7 +79,7 @@ export default function CreateJob() {
             <Text style={styles.label}>
               Duration <Text style={styles.required}>*</Text>
             </Text>
-            <TextInput placeholder="e.g. 3 days" style={styles.input} />
+            <TextInput placeholder="e.g. 3 days" placeholderTextColor="#000" style={styles.input} />
           </View>
         </View>
 
@@ -88,6 +89,7 @@ export default function CreateJob() {
           </Text>
           <TextInput
             placeholder="e.g. Victoria Island, Lagos"
+            placeholderTextColor="#000"
             style={styles.input}
           />
         </View>
@@ -200,6 +202,7 @@ const styles = StyleSheet.create({
     paddingVertical: 10,
     marginTop: 6,
     fontFamily: "poppins_regular",
+    color: "#000",
   },
   row: { flexDirection: "row", alignItems: "center", marginBottom: 16 },
   jobTypeContainer: { flexDirection: "row", flexWrap: "wrap", marginTop: 10 },

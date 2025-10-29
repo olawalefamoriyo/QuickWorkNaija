@@ -134,10 +134,12 @@ export default function Login() {
             keyboardType="phone-pad"
             value={phone}
             onChangeText={setPhone}
+            placeholderTextColor="#000"
             style={{
               flex: 1,
               paddingVertical: 14,
               fontSize: 16,
+              color: "#000",
             }}
           />
         </View>
@@ -177,10 +179,12 @@ export default function Login() {
             value={password}
             onChangeText={setPassword}
             keyboardType="phone-pad"
+            placeholderTextColor="#000"
             style={{
               flex: 1,
               paddingVertical: 14,
               fontSize: 16,
+              color: "#000",
             }}
           />
         </View>

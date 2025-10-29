@@ -32,7 +32,7 @@ export default function FindJobs() {
           <Ionicons name="search" size={16} color="#7E7E7E" />
           <TextInput
             placeholder="Search for jobs near you or elsewhere"
-            placeholderTextColor="#7E7E7E"
+            placeholderTextColor="#000"
             style={styles.searchInput}
           />
         </View>

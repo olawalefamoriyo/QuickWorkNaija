@@ -23,8 +23,7 @@ import CreateJob from "./src/screens/tabs/Jobs/CreateJob";
 const Stack = createNativeStackNavigator();
 
 export default function App() {
-  const splashImage = require("./assets/splash.png");
-  const [showSplashScreen, setShowSplashScreen] = useState(true);
+  const [forceShowApp, setForceShowApp] = useState(false);
 
   const [fontsLoaded] = useFonts({
     opensans_bold: require("./assets/fonts/opensans_bold.ttf"),
@@ -35,6 +34,7 @@ export default function App() {
 
   useEffect(() => {
     let mounted = true;
+
     (async () => {
       try {
         await SplashScreen.preventAutoHideAsync();
@@ -46,7 +46,7 @@ export default function App() {
       try {
         await SplashScreen.hideAsync();
       } catch (e) {}
-      if (mounted) setShowSplashScreen(false);
+      if (mounted) setForceShowApp(true);
     }, 10000);
 
     return () => {
@@ -57,24 +57,17 @@ export default function App() {
 
   useEffect(() => {
     if (fontsLoaded) {
-      const timer = setTimeout(async () => {
-        setShowSplashScreen(false);
+      (async () => {
+        await new Promise((r) => setTimeout(r, 1000));
         try {
           await SplashScreen.hideAsync();
-        } catch (e) {
-        }
-      }, 1000);
-      return () => clearTimeout(timer);
+        } catch (e) {}
+        setForceShowApp(true);
+      })();
     }
   }, [fontsLoaded]);
 
-  if (!fontsLoaded || showSplashScreen) {
-    return (
-      <View style={[styles.container]}>
-        <Image source={splashImage} style={styles.image} resizeMode="cover" />
-      </View>
-    );
-  }
+  if (!fontsLoaded && !forceShowApp) return null;
 
   return (
     <NavigationContainer>

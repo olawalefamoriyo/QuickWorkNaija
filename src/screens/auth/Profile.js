@@ -145,10 +145,12 @@ export default function Profile() {
               <TextInput
                 placeholder="Full name"
                 keyboardType="default"
+                placeholderTextColor="#000"
                 style={{
                   flex: 1,
                   paddingVertical: 14,
                   fontSize: 16,
+                  color: "#000",
                 }}
               />
             </View>
@@ -173,10 +175,12 @@ export default function Profile() {
               <TextInput
                 placeholder="Location"
                 keyboardType="default"
+                placeholderTextColor="#000"
                 style={{
                   flex: 1,
                   paddingVertical: 14,
                   fontSize: 16,
+                  color: "#000",
                 }}
               />
             </View>
@@ -403,11 +407,13 @@ export default function Profile() {
                 numberOfLines={5}
                 keyboardType="default"
                 textAlignVertical="top"
+                placeholderTextColor="#000"
                 style={{
                   flex: 1,
                   paddingVertical: 14,
                   fontSize: 16,
                   minHeight: 120,
+                  color: "#000",
                 }}
               />
             </View>

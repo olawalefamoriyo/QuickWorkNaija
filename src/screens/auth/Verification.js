@@ -142,11 +142,13 @@ export default function Verification() {
         >
           <TextInput
             placeholder={`Enter your ${selected || "NIN"}`}
+            placeholderTextColor="#000"
             keyboardType="default"
             style={{
               flex: 1,
               paddingVertical: 14,
               fontSize: 16,
+              color: "#000",
             }}
           />
         </View>

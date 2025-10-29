@@ -181,7 +181,7 @@ export default function ChatScreen({ route }) {
               color: "#000",
             }}
             placeholder="Type a message..."
-            placeholderTextColor="#999"
+            placeholderTextColor="#000"
             value={message}
             onChangeText={setMessage}
           />

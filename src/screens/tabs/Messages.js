@@ -69,7 +69,7 @@ export default function Messages({navigation}) {
               color: "#000",
             }}
             placeholder="Search messages..."
-            placeholderTextColor="#999"
+            placeholderTextColor="#000"
             value={search}
             onChangeText={setSearch}
           />

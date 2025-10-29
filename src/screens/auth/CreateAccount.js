@@ -90,10 +90,12 @@ export default function CreateAccount() {
           <TextInput
             placeholder="Enter your phone number"
             keyboardType="phone-pad"
+            placeholderTextColor="#000"
             style={{
               flex: 1,
               paddingVertical: 14,
               fontSize: 16,
+              color: "#000",
             }}
           />
         </View>

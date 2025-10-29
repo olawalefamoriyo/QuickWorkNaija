@@ -70,7 +70,9 @@ export default function UserType() {
               borderRadius: 32,
               backgroundColor: "#D9D9D9",
             }}
-          ></View>
+          >
+            <Image source={require('../../../assets/work-image.png')} style={{width: 18, height: 18}}/>
+          </View>
           <View style={{ display: "flex", flexDirection: "column", gap: 5 }}>
             <View
               style={{
@@ -108,7 +110,9 @@ export default function UserType() {
               borderRadius: 32,
               backgroundColor: "#D9D9D9",
             }}
-          ></View>
+          >
+            <Image source={require('../../../assets/hire-image.png')} style={{width: 18, height: 18}}/>
+          </View>
           <View style={{ display: "flex", flexDirection: "column", gap: 5 }}>
             <View
               style={{

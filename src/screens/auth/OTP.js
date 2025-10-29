@@ -198,6 +198,7 @@ const styles = StyleSheet.create({
     textAlign: "center",
     fontSize: 18,
     fontWeight: "600",
+    color: "#000",
   },
   button: {
     width: "100%",

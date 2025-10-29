@@ -70,7 +70,7 @@ export default function AppNavigation() {
               <Ionicons
                 name={iconName}
                 size={15}
-                color={focused ? "#FB6619" : "#FFF"}
+                color={focused ? "#FB6619" : "#000"}
                 style={{ marginBottom: 0 }} 
               />
               {focused && (
